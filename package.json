@@ -1,13 +1,22 @@
 {
-  "name"         : "expandrew-track-frontend",
-  "main"         : "server.js",
-  "repository"   : "https://github.com/expandrew/track-frontend",
-  "license"      : "MIT",
-  "author"       : "expandrew",
-  "dependencies" : {
-    "express"    : "~4.7.2",
-    "morgan"     : "~1.2.2",
-    "body-parser": "~1.5.2",
-    "method-override": "~2.1.2"
+  "name": "expandrew-track-frontend",
+  "description": "Front-end single page application layer for expandrew/track",
+  "main": "server.js",
+  "repository": "https://github.com/expandrew/track-frontend",
+  "license": "MIT",
+  "author": "expandrew",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.7.2",
+    "method-override": "^2.1.2",
+    "morgan": "^1.2.2"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "cd angular && gulp test",
+    "postinstall": "cd angular && npm install"
+  },
+  "engines": {
+    "node": "4.3.1"
   }
 }
