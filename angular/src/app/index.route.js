@@ -14,12 +14,12 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
-      .state('page', {
-        url: '/page',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
+      // .state('page', {
+      //   url: '/page',
+      //   templateUrl: 'app/main/main.html',
+      //   controller: 'MainController',
+      //   controllerAs: 'main'
+      // })
 
     $urlRouterProvider.otherwise('/');
 
