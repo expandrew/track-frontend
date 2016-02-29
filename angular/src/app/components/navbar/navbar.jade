@@ -1,0 +1,19 @@
+html
+  body
+    nav.navbar.navbar-default.navbar-static-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', ng-init="isCollapsed = true", ng-click="isCollapsed = !isCollapsed")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/')
+            span track
+        div(uib-collapse="isCollapsed").navbar-collapse
+          ul.nav.navbar-nav
+            li(ui-sref-active="active")
+              a(ui-sref="home") Home
+            //- li(ui-sref-active="active")
+            //-   a(ui-sref="page") Page
+          //- p.navbar-text.navbar-right Application was created {{ vm.relativeDate }}.

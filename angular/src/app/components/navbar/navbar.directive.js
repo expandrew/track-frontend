@@ -3,15 +3,16 @@
 
   angular
     .module('angular')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('trackNavbar', trackNavbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function trackNavbar() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {
-          creationDate: '='
+          creationDate: '=',
+          isCollapsed: '='
       },
       controller: NavbarController,
       controllerAs: 'vm',
