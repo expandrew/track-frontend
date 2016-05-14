@@ -2,13 +2,16 @@
   'use strict';
 
   angular
-    .module('angular')
+    .module('track-angular')
     .config(config);
 
   /** @ngInject */
-  function config($logProvider, toastrConfig) {
+  function config($logProvider, $locationProvider, toastrConfig) {
     // Enable log
     $logProvider.debugEnabled(true);
+
+    // Use the HTML5 History API
+    $locationProvider.html5Mode(true);
 
     // Set options third-party lib
     toastrConfig.allowHtml = true;

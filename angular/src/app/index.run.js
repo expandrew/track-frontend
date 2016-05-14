@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('angular')
+    .module('track-angular')
     .run(runBlock);
 
   /** @ngInject */
