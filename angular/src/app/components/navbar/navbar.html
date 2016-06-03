@@ -1,0 +1,12 @@
+<nav id="track-navbar" class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><span>track</span></a>
+    </div>
+    <div uib-collapse="isCollapsed" class="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
