@@ -12,15 +12,17 @@
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {},
       controller: NavbarController,
-      controllerAs: 'vm',
+      controllerAs: 'navbar',
       bindToController: true
     };
 
     return directive;
 
     /** @ngInject */
-    function NavbarController() {
+    function NavbarController(Session) {
       var vm = this;
+
+      vm.Session = Session;
     }
   }
 
