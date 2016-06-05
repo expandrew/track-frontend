@@ -31,6 +31,23 @@ $font-family-base: -apple-system, BlinkMacSystemFont,
   }
 }
 
+.expandrew {
+  font-family: 'Ubuntu', 'Helvetica', sans-serif;
+  font-weight: 700;
+  letter-spacing: -.050em;
+  transform:scale(.95,1); 
+  -webkit-transform:scale(.95,1);
+}
+
+.navbar-brand {
+  font-size: 20px;
+}
+
+// Overwriting a weird behavior where .navbar-right elements get pushed outside the width of the container
+.navbar-right {
+  margin-right: 0; 
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

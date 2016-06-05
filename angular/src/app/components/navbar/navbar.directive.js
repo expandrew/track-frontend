@@ -22,7 +22,14 @@
     function NavbarController(Session) {
       var vm = this;
 
+      vm.toggle = toggle;
+      vm.collapse = collapse;
       vm.Session = Session;
+
+      vm.collapsed = true;
+
+      function toggle () { vm.collapsed = !vm.collapsed; }
+      function collapse () { vm.collapsed = true; }
     }
   }
 
