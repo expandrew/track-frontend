@@ -18,7 +18,7 @@
         <!-- User Menu on Mobile -->
         <li ng-show="!navbar.Session.token" class="visible-xs" ui-sref-active="login"><a ui-sref="login" ng-click="navbar.collapse()">Login</a></li>
         <li ng-show="navbar.Session.token" class="visible-xs" ui-sref-active="account"><a ui-sref="account" ng-click="navbar.collapse()">Account</a></li>
-        <li ng-show="navbar.Session.token" class="visible-xs" ui-sref-active="logout"><a ui-sref="logout" ng-click="navbar.collapse()">Logout</a></li>
+        <li ng-show="navbar.Session.token" class="visible-xs" ui-sref-active="logout"><a ng-click="navbar.logout(); navbar.collapse()">Logout</a></li>
 
       </ul>
 
@@ -37,9 +37,9 @@
             </button>
             <!-- User Button Dropdown Menu -->
             <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="userMenu">
-              <li role="menuitem"><a href="#">Account</a></li>
-              <li class="divider"></li>
-              <li role="menuitem"><a ui-sref="logout">Log Out</a></li>
+              <!-- <li role="menuitem"><a ui-sref="account">Account</a></li> -->
+              <!-- <li class="divider"></li> -->
+              <li role="menuitem"><a ng-click="navbar.logout()">Log Out</a></li>
             </ul>
           </div>
         </li>

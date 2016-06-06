@@ -5,6 +5,6 @@
   angular
     .module('track-angular')
     .constant('moment', moment)
-    .constant('apiHost', 'http://localhost:5000/api/v1');
+    .constant('API_HOST', 'http://10.0.1.2:5000/api/v1')
 
 })();

@@ -3,9 +3,9 @@
 
   angular
     .module('track-angular')
-    .factory('Item', function($resource) {
+    .factory('Item', function($resource, API_HOST) {
 
-      return $resource('//localhost:5000/api/v1/items/:id');
+      return $resource(API_HOST + '/items/:id');
     });
 
 })();
