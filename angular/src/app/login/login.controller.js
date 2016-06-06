@@ -26,9 +26,10 @@
 
         // Get token from data
         var token = data.data.token;
+        var user = data.data.user;
 
         // Create Session
-        Session.create(token);
+        Session.create(token, user);
 
         // Show Success
         toastr.success('Logged In');

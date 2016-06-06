@@ -33,7 +33,7 @@
           <div class="btn-group" uib-dropdown is-open="status.isopen">
             <!-- User Button -->
             <button id="userMenu" type="button" class="btn btn-default navbar-btn" uib-dropdown-toggle ng-disabled="disabled">
-              User <span class="caret"></span>
+              {{ navbar.Session.user.username || 'Account' }} <span class="caret"></span>
             </button>
             <!-- User Button Dropdown Menu -->
             <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="userMenu">

@@ -9,9 +9,10 @@
     function Session () {
 
       // Create Session
-      this.create = function createSession (token) {
+      this.create = function createSession (token, user) {
 
         this.token = token;
+        this.user = user;
 
         return this;
       };
@@ -20,6 +21,7 @@
       this.destroy = function destroySession () {
 
         this.token = null;
+        this.user = null;
 
         return this;
       };
