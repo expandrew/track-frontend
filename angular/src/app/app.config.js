@@ -6,7 +6,7 @@
     .config(config);
 
   /** @ngInject */
-  function config($httpProvider, $locationProvider, $logProvider, toastrConfig) {
+  function config($httpProvider, $locationProvider, $logProvider, $resourceProvider, toastrConfig) {
 
     // Configure CSRF
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
@@ -18,6 +18,9 @@
 
     // Use the HTML5 History API
     $locationProvider.html5Mode(true);
+
+    // Don't strip trailing slashes from $resource API calls
+    $resourceProvider.defaults.stripTrailingSlashes = false;
 
     // Set options third-party lib
     toastrConfig.allowHtml = true;

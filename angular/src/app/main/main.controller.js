@@ -6,8 +6,10 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController() {
+  function MainController(Item) {
     var vm = this;
 
+    // Call API
+    vm.items = Item.query();
   }
 })();
