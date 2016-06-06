@@ -46,6 +46,10 @@
 
         function navbarLogoutSuccess () {
 
+          // Broadcast Event
+          $rootScope.$broadcast(AUTH_EVENTS.logoutSuccess);
+
+          // Redirect
           $state.go('login');
         }
 

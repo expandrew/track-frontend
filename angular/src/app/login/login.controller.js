@@ -6,7 +6,7 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($state, AuthService, Session, toastr) {
+  function LoginController($rootScope, $state, AuthService, Session, toastr) {
     var vm = this;
 
     vm.submit = submit;
@@ -34,11 +34,17 @@
         // Show Success
         toastr.success('Logged In');
 
+        // Broadcast Event
+        $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+
         // Redirect
         $state.go('home');
       }
 
       function loginSubmitError (error) {
+
+        // Broadcast Event
+        $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
 
         // Show Error
         toastr.error(JSON.stringify(error.data), 'Error');
