@@ -6,11 +6,12 @@
     .config(config);
 
   /** @ngInject */
-  function config($httpProvider, $logProvider, $locationProvider, toastrConfig) {
+  function config($httpProvider, $locationProvider, $logProvider, toastrConfig) {
 
     // Configure CSRF
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+    $httpProvider.interceptors.push('apiInterceptor');
 
     // Enable log
     $logProvider.debugEnabled(true);
