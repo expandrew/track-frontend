@@ -6,13 +6,16 @@
     .service('Session', Session);
 
     /** @ngInject */
-    function Session () {
+    function Session ($localStorage) {
 
       // Create Session
       this.create = function createSession (token, user) {
 
         this.token = token;
         this.user = user;
+
+        // Store token in localStorage
+        $localStorage.trackToken = token;
 
         return this;
       };
@@ -22,6 +25,9 @@
 
         this.token = null;
         this.user = null;
+
+        // Remove token from localStorage
+        $localStorage.trackToken = null;
 
         return this;
       };

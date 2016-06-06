@@ -27,6 +27,9 @@
 
           // Not Authenticated
           case 401, 403:
+
+            Session.destroy();
+
             $rootScope.$broadcast(AUTH_EVENTS.notAuthenticated);
             break;
         }

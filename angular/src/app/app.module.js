@@ -2,6 +2,19 @@
   'use strict';
 
   angular
-    .module('track-angular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr']);
+    .module('track-angular', [
+        'angular-jwt',
+        'ngAnimate',
+        'ngCookies',
+        'ngTouch',
+        'ngSanitize',
+        'ngMessages',
+        'ngAria',
+        'ngResource',
+        'ngStorage',
+        'ui.router',
+        'ui.bootstrap',
+        'toastr'
+    ]);
 
 })();
