@@ -19,7 +19,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($state, AuthService, Session, toastr) {
+    function NavbarController($rootScope, $state, AuthService, AUTH_EVENTS, Session, toastr) {
       var vm = this;
 
       vm.toggle = toggle;
