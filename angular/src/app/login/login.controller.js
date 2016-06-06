@@ -6,7 +6,7 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($rootScope, $state, AuthService, Session, toastr) {
+  function LoginController($rootScope, $state, AuthService, AUTH_EVENTS, Session, toastr) {
     var vm = this;
 
     vm.submit = submit;
