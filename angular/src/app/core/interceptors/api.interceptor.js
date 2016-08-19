@@ -19,6 +19,8 @@
         config.headers['Authorization'] = (Session.token) ? 'JWT ' + Session.token : undefined;
 
         return config;
+
+        // FIXME: Write function for refreshing token - currently tokens are only valid for 300s after issue
       }
 
       function responseError (response) {
