@@ -3,8 +3,7 @@
   'use strict';
 
   angular
-    .module('angular')
-    .constant('malarkey', malarkey)
+    .module('track-angular')
     .constant('moment', moment);
 
 })();

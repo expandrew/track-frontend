@@ -57,10 +57,6 @@
         "extension": "js",
         "srcExtension": "js"
       },
-      "htmlPreprocessor": {
-        "key": "jade",
-        "extension": "jade"
-      },
       "foundationComponents": {
         "name": null,
         "version": null,

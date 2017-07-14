@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('angular')
+    .module('track-angular')
     .directive('trackNavbar', trackNavbar);
 
   /** @ngInject */
@@ -10,10 +10,7 @@
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
-      scope: {
-          creationDate: '=',
-          isCollapsed: '='
-      },
+      scope: {},
       controller: NavbarController,
       controllerAs: 'vm',
       bindToController: true
@@ -22,11 +19,8 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment) {
+    function NavbarController() {
       var vm = this;
-
-      // "vm.creation" is avaible by directive option "bindToController: true"
-      vm.relativeDate = moment(vm.creationDate).fromNow();
     }
   }
 
